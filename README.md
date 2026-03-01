@@ -92,3 +92,14 @@ Set the `CI` environment variable to `true` to enable:
 ```bash
 CI=true npx playwright test
 ```
+
+To see in chrome browser action use this command 
+
+# Watch all tests in Chrome
+npx playwright test --project=chromium --headed --workers=1
+# Slow it down to see each step clearly (500ms delay)
+npx playwright test --project=chromium --headed --workers=1 --slow-mo=500
+# Watch a single specific test file
+npx playwright test tests/login.spec.ts --headed
+# Open the visual HTML report after a run
+npx playwright show-report
